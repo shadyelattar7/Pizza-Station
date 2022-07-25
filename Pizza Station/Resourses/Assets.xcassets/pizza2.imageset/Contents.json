@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "4274048cd5f17c49dfee280f77a3739d_Cheese-Pizza_HB-2.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
