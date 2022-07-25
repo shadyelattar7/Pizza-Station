@@ -35,7 +35,7 @@ class RatingView: UIView{
         self.addSubview(ratingStackview)
         ratingStackview.anchor(top: self.topAnchor, left: nil, right: nil, bottom: self.bottomAnchor, paddingTop: 2, paddingLeft: 0, paddingRight: 0, paddingBottom: 2, width: 0 , height: 0)
         ratingStackview.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        
+       
     }
     
     

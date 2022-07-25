@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SliderCell" customModule="PizzaWorld" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SliderCell" customModule="Pizza_Station" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="589" height="440"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -59,15 +58,15 @@
                                 <rect key="frame" x="15" y="10" width="347" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFa-UK-m6i">
-                                        <rect key="frame" x="0.0" y="0.0" width="347" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="347" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITd-sH-dws" customClass="RatingView" customModule="PizzaWorld" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="32" width="347" height="25"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITd-sH-dws" customClass="RatingView" customModule="Pizza_Station" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="37" width="347" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="EL1-NO-I2Z"/>
+                                            <constraint firstAttribute="height" constant="20" id="EL1-NO-I2Z"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UvI-6S-EA7">
@@ -173,7 +172,12 @@
             </constraints>
             <size key="customSize" width="589" height="440"/>
             <connections>
+                <outlet property="category_lbl" destination="0Kg-n6-etq" id="AzC-9D-DK5"/>
+                <outlet property="orderNowButton" destination="Zei-dC-uxx" id="C5I-zD-KlL"/>
                 <outlet property="pizzaImg_iv" destination="b7F-Tv-ooe" id="GWE-rV-ufc"/>
+                <outlet property="rate" destination="ITd-sH-dws" id="isj-03-Tny"/>
+                <outlet property="time_lbl" destination="Jrs-9B-dAg" id="FCY-bQ-lWD"/>
+                <outlet property="title_lbl" destination="IFa-UK-m6i" id="Ydo-mC-aLw"/>
             </connections>
             <point key="canvasLocation" x="164.49275362318841" y="91.741071428571431"/>
         </collectionViewCell>

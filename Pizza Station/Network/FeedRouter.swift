@@ -8,12 +8,12 @@
 import Foundation
 import Alamofire
 
-enum MainRouter: APIRouter{
-    case slider
+enum FeedRouter: APIRouter{
+    case popular
     
     var method: HTTPMethod{
         switch self{
-        case .slider:
+        case .popular:
             return .get
         }
     }
@@ -21,21 +21,21 @@ enum MainRouter: APIRouter{
     
     var path: String{
         switch self{
-        case .slider:
-            return "slider.php"
+        case .popular:
+            return "popular.php"
         }
     }
     
     var parameters: Parameters?{
         switch self{
-        case .slider:
+        case .popular:
             return nil
         }
     }
     
     var encoding: ParameterEncoding{
         switch self{
-        case .slider:
+        case .popular:
             return URLEncoding.default
         }
     }
@@ -47,6 +47,3 @@ enum MainRouter: APIRouter{
 
 
 
-enum PizzaErrors: Error{
-    case URLNotValid
-}

@@ -7,14 +7,11 @@
 
 import UIKit
 
-class PizzaOptionsView: UIView {
+class PizzaOptionsView: NibLoadingView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    @IBOutlet weak var sizeView: SizeingSelectorView!
+    @IBOutlet weak var quantityView: QuantityView!
+    @IBOutlet weak var descView: PIZZATextView!
+    
 
 }

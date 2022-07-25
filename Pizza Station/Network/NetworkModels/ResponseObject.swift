@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct ResponseObject<T:  Decodable>: Decodable {
+    var message: String
+    var status: Bool
+    var data: T
+    
+}

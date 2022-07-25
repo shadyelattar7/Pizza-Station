@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct SizeItemCellViweModel {
+    var topString: String
+    
+    init(size: Sizes, showPrice: Bool) {
+        self.topString = size.size ?? ""
+    }
+    
+    
+}

@@ -8,11 +8,40 @@
 import Foundation
 import UIKit
 
-class AppCoordinator{
+protocol Coordinator {
+    var Main: MainNavigator {get}
+    var Cart: CartNavigator {get}
+    var navgationController: UINavigationController? {get}
+}
+
+class AppCoordinator: Coordinator{
+    
     let window: UIWindow
+    
+    
+    private lazy var tabBar: CustomTabBarController = {
+       return CustomTabBarController(coordinator: self)
+    }()
+    
+    lazy var Main: MainNavigator = {
+        return .init(coordentor: self)
+    }()
+    
+    
+    lazy var Cart: CartNavigator = {
+        return .init(coordentor: self)
+    }()
+    
+    var navgationController: UINavigationController? {
+        if let navgationController = tabBar.selectedViewController as? UINavigationController{
+            return navgationController
+        }
+        return nil
+    }
     
     init(window: UIWindow = UIWindow()) {
         self.window = window
+      
     }
     
     func start (){
@@ -22,6 +51,6 @@ class AppCoordinator{
     
     //MARK:- To make logic here ->
     var rootViewController: UIViewController{
-        return CustomTabBarController()
+        return tabBar
     }
 }

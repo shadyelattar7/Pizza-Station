@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 extension UIView {
 
@@ -192,17 +193,17 @@ extension UISearchBar {
 }
 
 
-//extension UIImageView {
-//    func getImage(imageUrl : String){
-//        guard let url = URL(string: imageUrl) else {return}
-//        let imageResouse = ImageResource(downloadURL: url)
-//        self.kf.setImage(with: imageResouse)
-//    }
-//}
+extension UIImageView {
+    func getImage(imageUrl : String){
+        guard let url = URL(string: imageUrl) else {return}
+        self.sd_imageIndicator = SDWebImageActivityIndicator.medium
+        self.sd_setImage(with: url, placeholderImage: UIImage(named: "download"))
+    }
+}
 
 
 @IBDesignable
-public class GradientBtn: UIButton {
+public class GradientBtn: UIView {
     @IBInspectable var startColor:   UIColor = .black { didSet { updateColors() }}
     @IBInspectable var endColor:     UIColor = .white { didSet { updateColors() }}
     @IBInspectable var startLocation: Double =   0.05 { didSet { updateLocations() }}
